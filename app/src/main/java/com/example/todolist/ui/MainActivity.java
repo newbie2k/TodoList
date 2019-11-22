@@ -11,15 +11,10 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.os.PersistableBundle;
-import android.util.Log;
 import android.view.View;
 import android.widget.Toast;
 
 import com.example.todolist.R;
-import com.example.todolist.SubTaskActivity;
-import com.example.todolist.data.SubTask;
-import com.example.todolist.data.Task;
-import com.example.todolist.ui.adapter.TaskAdapter;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 public class MainActivity extends AppCompatActivity implements TaskListFragment.GetIdListener {

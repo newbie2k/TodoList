@@ -1,4 +1,4 @@
-package com.example.todolist;
+package com.example.todolist.ui;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.FragmentManager;
@@ -7,6 +7,7 @@ import androidx.fragment.app.FragmentTransaction;
 import android.os.Bundle;
 import android.view.View;
 
+import com.example.todolist.R;
 import com.example.todolist.ui.AddTaskDialog;
 import com.example.todolist.ui.SubTaskListFragment;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
