@@ -51,11 +51,16 @@ public class AddTaskDialog extends DialogFragment {
 
     public AddTaskDialog(String title, Task task, SubTask subTask) {
         this.title = title;
-        taskName = task.taskName;
-        taskId = task.taskId;
-        subTaskName = subTask.subTask;
-        sub_TaskId = subTask.taskId;
-        subTaskId = subTask.id;
+        if(subTask != null) {
+            subTaskName = subTask.subTask;
+            sub_TaskId = subTask.taskId;
+            subTaskId = subTask.id;
+        }
+        else {
+            taskName = task.taskName;
+            taskId = task.taskId;
+        }
+
     }
 
     public AddTaskDialog(){
@@ -121,14 +126,14 @@ public class AddTaskDialog extends DialogFragment {
                 else {
                     if(subTaskName != null) {
                         SubTask subTask = new SubTask();
-                        subTask.subTask = subTaskName;
+                        subTask.subTask = newTaskName;
                         subTask.taskId = sub_TaskId;
                         subTask.id = subTaskId;
                         viewModel.updateSubTask(subTask);
                     }
                     else {
                         Task task = new Task();
-                        task.taskName = taskName;
+                        task.taskName = newTaskName;
                         task.taskId = taskId;
                         viewModel.updateTask(task);
                     }
